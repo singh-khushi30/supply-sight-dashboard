@@ -1,69 +1,50 @@
-# React + TypeScript + Vite
+📦 SupplySight Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A polished Supply Chain Inventory Dashboard built as part of a frontend challenge.
+It demonstrates how to design a modern React frontend, wire it to a GraphQL API, and apply business logic for real-world supply chain use cases.
 
-Currently, two official plugins are available:
+✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📊 KPI Cards → Total Stock, Total Demand, Fill Rate
 
-## Expanding the ESLint configuration
+📑 Products Table → with pagination, search, and filters
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🎨 Status Pills → Healthy / Low / Critical (critical rows highlighted)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📂 Product Drawer → update demand and transfer stock between warehouses
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+📈 Line Chart → Stock vs Demand trend (7d / 14d / 30d ranges)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🔗 Mock GraphQL API → Queries + Mutations for products, warehouses, KPIs
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🛠️ Tech Stack
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Frontend → React + Vite + TailwindCSS
+
+Data Layer → Apollo Client (GraphQL)
+
+Backend → Apollo Server (mock GraphQL)
+
+Charts → Recharts
+
+
+🚀 Getting Started
+1. Clone Repo
+git clone https://github.com/singh-khushi30/supply-sight-dashboard.git
+cd supply-sight
+
+2. Start Backend
+cd server
+npm install
+node index.js
+
+3. Start Frontend
+cd ../supplysight-dashboard
+npm install
+npm run dev
+
+👩‍💻 Author
+
+Built with ❤️ by Khushi Singh (@singh-khushi30
+)
